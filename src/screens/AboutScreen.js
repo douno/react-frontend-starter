@@ -1,14 +1,14 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-function HomeScreen() {
+function AboutScreen() {
   return (
     <div>
         <Container>
-            HomeScreen
+            AboutScreen
         </Container>
     </div>
   )
 }
 
-export default HomeScreen
+export default AboutScreen

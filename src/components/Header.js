@@ -1,19 +1,27 @@
 import React from 'react';
 import { Navbar, Nav, Container, Row } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap'
 
 function Header() {
   return (
     <header>
       <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
         <Container>
-          <Navbar.Brand href="#home">App Name</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/page-1"><i className='fas fa-shopping-cart'></i>Page 1</Nav.Link>
-              <Nav.Link href="/page-2"><i className='fas fa-user'></i>Page 2</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+            <LinkContainer to={'/'}>
+                <Navbar.Brand href="#home">App Name</Navbar.Brand>
+            </LinkContainer>
+          
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <LinkContainer to={'/'}>
+                        <Nav.Link><i className='fas fa-home'></i> Home</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to={'/about'}>
+                        <Nav.Link><i className='fas fa-user'></i> About</Nav.Link>
+                    </LinkContainer>
+                </Nav>
+            </Navbar.Collapse>
         </Container>
       </Navbar>
     </header>
